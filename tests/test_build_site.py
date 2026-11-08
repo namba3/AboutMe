@@ -117,15 +117,50 @@ class SiteTests(unittest.TestCase):
                 markdown = (ROOT / "src" / name).read_text(encoding="utf-8")
                 experience = markdown.split(start, 1)[1].split(end, 1)[0]
                 sections = experience.split("\n#### ")[1:]
-                self.assertEqual(len(sections), 13)
+                self.assertEqual(len(sections), 14)
                 for section in sections:
                     with self.subTest(project=section.splitlines()[0]):
                         content = section.split("\n\n", 1)[1]
+                        # The new renewal project has no verified period or team
+                        # size yet, so do not invent a metadata table for it.
+                        renewal = ("大規模リニューアル" in section.splitlines()[0]
+                                   or "Major Web Application Renewal" in section.splitlines()[0])
+                        if renewal:
+                            self.assertFalse(content.startswith(header + "\n"))
+                            self.assertTrue(content.strip())
+                            continue
                         self.assertTrue(content.startswith(header + "\n"))
                         table, prose = content.split("\n\n", 1)
                         self.assertGreaterEqual(table.count("\n| "), 3)
                         self.assertTrue(prose.strip())
                         self.assertFalse(prose.lstrip().startswith("|"))
+
+    def test_kakaku_renewal_and_main_responsibilities(self):
+        """Both profiles cover cross-functional collaboration and architecture."""
+        examples = (
+            ("aboutme.md", "### 株式会社カカクコム", "## 語学",
+             "#### プロジェクト：Webアプリケーションの大規模リニューアル",
+             ("SSR", "企画", "デザイン", "単体テスト", "DI"),
+             ("既存", "API", "入出力例", "責務", "インターフェース", "交換可能性")),
+            ("aboutme.en.md", "### Kakaku.com, Inc.", "## LANGUAGES",
+             "#### Project: Major Web Application Renewal",
+             ("SSR", "product planning", "design", "unit tests", "DI"),
+             ("existing", "API", "input/output examples", "responsibility",
+              "interfaces", "replace")),
+        )
+        for name, company, next_section, project, main_words, project_words in examples:
+            source = (ROOT / "src" / name).read_text(encoding="utf-8")
+            section = source.split(company, 1)[1].split(next_section, 1)[0]
+            self.assertEqual(section.count(project), 1)
+            main, renewal = section.split(project, 1)
+            for term in main_words:
+                with self.subTest(file=name, part="main", term=term):
+                    self.assertIn(term, main)
+            for term in project_words:
+                with self.subTest(file=name, part="renewal", term=term):
+                    self.assertIn(term, renewal)
+            self.assertEqual(section.count("| 項目 | 内容 |") +
+                             section.count("| Item | Details |"), 1)
 
     def test_normalized_markdown(self):
         self.assertFalse((ROOT / "src/aboutme_english.md").exists())

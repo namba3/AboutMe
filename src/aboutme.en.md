@@ -314,7 +314,23 @@ The system consisted of multiple applications, and I worked on frontend and back
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | C# / .NET Framework, ASP.NET<br>JavaScript<br>Python |
 
-I develop and maintain web services, working across a broad range of components, including related administration interfaces and batch-processing applications.
+I develop and maintain web services, including web applications, administration interfaces, and batch-processing applications.
+
+The web applications primarily use server-side rendering (SSR). On the client side, I often work with plain JavaScript rather than UI frameworks such as Vue.js or React.
+
+Although product planning, design, and engineering are separate organizational functions, we work closely and coordinate flexibly. I contribute an engineering perspective to refining requirements and coordinating with designers, with the aim of improving product quality.
+
+I also work on incremental improvements to long-lived codebases. While accounting for existing functionality and operational constraints, I have helped introduce unit tests and dependency injection (DI), separate responsibilities, and refactor code to improve maintainability and ease of change.
+
+#### Project: Major Web Application Renewal
+
+For a major web application renewal, I worked on substantially redesigning the application while retaining established infrastructure such as databases and shared libraries. My responsibilities included software architecture design, refining requirements with product planners, defining API boundaries, and coordinating with developers in other departments.
+
+Extensive documentation helped us understand the existing system and its compatibility requirements. A key design challenge was representing the new application's structures and extensions on top of the existing foundation. I worked closely with product planners to clarify requirements and align them with feasible technical designs.
+
+When defining API boundaries, I considered responsibility separation both within the system and across development teams. For APIs owned by other departments, I provided requirements and concrete input/output examples from the consumer's perspective and collaborated with their developers to refine the interfaces.
+
+For the internal architecture, I applied lessons from introducing DI and separating responsibilities in other web applications. I emphasized dependencies through interfaces to encourage encapsulation and loose coupling, improve unit-testability, and make implementations easier to replace.
 
 
 ---
