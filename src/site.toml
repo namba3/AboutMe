@@ -1,0 +1,33 @@
+# Source-of-truth metadata for the static, bilingual GitHub Pages site.
+# Page order determines the primary/home page.
+
+[site]
+brand = "Engineering / Profile"
+eyebrow = "PORTFOLIO / ENGINEERING"
+language_label = "Language"
+footer = "Built from Markdown · GitHub Pages"
+back_to_top = "↑ Top"
+
+[[pages]]
+source = "aboutme.md"
+output = "index.html"
+lang = "ja"
+title = "技術プロフィール"
+subtitle = "ソフトウェア設計・開発の経験と技術的な取り組み"
+date = "2026年11月時点の記録"
+toc = "目次"
+switch = "English"
+switch_url = "./index_english.html"
+skip = "本文へ移動"
+
+[[pages]]
+source = "aboutme.en.md"
+output = "index_english.html"
+lang = "en"
+title = "Engineering Profile"
+subtitle = "Software engineering experience and projects"
+date = "Originally documented August 12, 2022"
+toc = "Contents"
+switch = "日本語"
+switch_url = "./index.html"
+skip = "Skip to content"
