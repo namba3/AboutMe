@@ -2,13 +2,11 @@
 
 ## SUMMARY
 
-- Professional experience as a software engineer
-  - Three years of experience with IoT-related systems
-  - More than four years of experience developing web services
-- Three years of part-time experience as a technical staff member, primarily on OCR-related projects
-- A foundation in computer science
-- Some experience with data science
-- Experience developing frontend, backend, and microservice software
+As a software engineer, I have worked across a range of domains, primarily web services, as well as industrial IoT, machine-tool data collection and remote monitoring, and 3D model viewers. My experience includes web applications built with C#, TypeScript, and JavaScript, along with API servers and data integration systems using Rust and Go.
+
+I emphasize performance, safety, maintainability, and ease of change in software design and implementation. My work has ranged from incremental improvements to existing systems to major application renewals, including separation of responsibilities, management of dependencies, and API boundary design. I also collaborate with product planners, designers, and developers in other departments to refine requirements and improve product quality from an engineering perspective.
+
+In personal projects, I primarily use Rust to explore systems programming and software architecture. Beyond implementation, I am interested in the design principles and technical trade-offs behind software, and I continue to learn and experiment with new approaches.
 
 ## EDUCATION AND EMPLOYMENT
 
@@ -340,13 +338,6 @@ For the internal architecture, I applied lessons from introducing DI and separat
 - Japanese: Native
 - English: Intermediate reading and writing
 
-## OTHER
-
-- [GitHub](https://github.com/namba3)
-- [Technical articles](https://namba3.github.io/commonplace/)
-- Member of the [Information Processing Society of Japan (IPSJ)](https://www.ipsj.or.jp/english/index.html)
-- Interests: Balcony gardening and houseplants
-
 ## PERSONAL STATEMENT
 
 ### Engineering Principles
@@ -360,3 +351,10 @@ When deadlines take priority over safety or runtime performance, or when code ma
 I regularly explore new technologies and experiment with those that interest me.
 I have followed developments in WebAssembly and WASI, the system interface for WebAssembly runtimes.
 I am comfortable reading technical articles in English and actively seek information on topics that are not well covered in Japanese.
+## OTHER
+
+- [GitHub](https://github.com/namba3)
+- [Technical articles](https://namba3.github.io/commonplace/)
+- Member of the [Information Processing Society of Japan (IPSJ)](https://www.ipsj.or.jp/english/index.html)
+- Interests: Balcony gardening and houseplants
+
