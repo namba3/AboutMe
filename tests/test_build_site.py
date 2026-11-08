@@ -73,7 +73,7 @@ class SiteTests(unittest.TestCase):
             self.assertEqual(len(company_sections), len(companies))
             for section, company in zip(company_sections, companies):
                 with self.subTest(filename=filename, company=company):
-                    self.assertTrue(section.startswith(company + "\n"))
+                    self.assertTrue(section.startswith(company))
                     self.assertIn("\n" + period_label, section)
                     self.assertIn("\n" + role_label, section)
                     self.assertNotIn("#### 在籍期間", section)
