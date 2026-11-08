@@ -31,63 +31,44 @@ In personal projects, I primarily use Rust to explore systems programming and so
 
 ### Programming Languages
 
-#### C#
+| Language | Experience and Uses |
+| --- | --- |
+| C# | A primary language in professional work, used for web applications, API servers, and business applications. |
+| Rust | A primary language for personal projects, including CLI tools, servers, and systems programming. Also used professionally. |
+| Python | Used for utilities in personal projects and for data processing and application development at work. |
+| Go | Used professionally to build an authentication and authorization server and a gRPC-based data integration system. |
+| C | Used since university, building a foundation in low-level programming and CPU, memory, and cache efficiency. |
+| C++ | Used since university for object-oriented programming, template metaprogramming, and SIMD optimization of image processing. |
+| TypeScript / JavaScript | Primary languages in professional work, used for frontend development, SSR-based web applications, and Node.js servers. |
 
-One of the main languages used in my current and previous jobs.
-I have developed applications and API servers using C#.
+### Software Design and Architecture
 
-#### Rust
-
-I began studying Rust in earnest around the announcement of Rust 2018 Edition.
-I believe it will play an important role in the future of systems programming.
-
-Rust is one of my primary languages for personal projects, mainly command-line tools and small servers.
-I also have experience developing small applications with Rust professionally.
-
-#### Python
-
-One of my primary languages for personal projects, mainly small utilities.
-I have also used Python professionally for basic data processing.
-
-#### Go
-
-I used Go to build an authentication and authorization server in one project.
-I also favored Go when adopting gRPC in another project.
-I have followed Go less closely since I began working with Rust.
-
-#### C
-
-I have used C since my student years.
-It helped me develop an understanding of CPU efficiency, memory efficiency, and cache performance.
-I have followed C less closely since I began working with Rust.
-
-#### C++
-
-I have used C++ since my student years.
-I learned object-oriented programming and template metaprogramming through C++.
-I kept up with C++11, C++14, C++17, and C++20.
-I have followed C++ less closely since I began working with Rust.
-
-#### TypeScript / JavaScript
-
-One of the main language families used in my current and previous jobs.
-Most of my experience is in frontend development, but I have also developed servers with Node.js.
+| Area | Experience and Focus |
+| --- | --- |
+| Software Architecture | Major web application renewal, designing new structures on an existing foundation and separating responsibilities. |
+| API Design | Defining API boundaries and responsibilities; providing requirements and input/output examples and coordinating with developers in other departments. |
+| Loose Coupling and Replaceability | Dependency injection (DI), interface-based dependencies, encapsulation, and replaceable components. |
+| Testing and Quality Improvements | Introducing unit tests, incrementally refactoring existing code, and improving maintainability. |
+| Distributed Systems and Data Integration | gRPC and Protocol Buffers for device communication and streaming data collection. |
+| Performance Optimization | SIMD image-processing optimization with PowerPC VMX and performance improvements to existing applications. |
 
 ### Cloud Infrastructure
 
-#### AWS
+| Category | Experience and Services |
+| --- | --- |
+| AWS | Used professionally for cloud systems including industrial IoT and remote monitoring of machine tools. |
+| Serverless and APIs | Lambda, API Gateway |
+| Compute and Delivery | EC2, ELB, CloudFront, Route 53 |
+| Storage, Messaging, and Analytics | S3, DynamoDB, SQS, Athena |
 
-AWS was the primary cloud platform in my previous job.
-I used it across several projects, including the following services:
+### Tools and Development Environment
 
-- Lambda, API Gateway, EC2, S3, DynamoDB, SQS, Athena, CloudFront, Route 53, ELB
-
-### Tools and Technologies
-
-- IDEs / editors: VS Code, Visual Studio
-- Version control: Git
-- Virtualization and containers: Docker, WSL
-- Database systems: PostgreSQL, MySQL, SQLite
+| Category | Technologies and Tools |
+| --- | --- |
+| IDEs and Editors | Visual Studio Code, Visual Studio |
+| Version Control | Git |
+| Containers and Development Environments | Docker, WSL |
+| Databases | PostgreSQL, MySQL, SQLite |
 
 ---
 
