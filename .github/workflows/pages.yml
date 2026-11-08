@@ -33,7 +33,7 @@ jobs:
       - name: Verify artifact
         run: |
           test -s dist/index.html
-          test -s dist/index_english.html
+          test -s dist/index.en.html
           test -s dist/assets/style.css
           test -f dist/.nojekyll
       - name: Upload Pages artifact
