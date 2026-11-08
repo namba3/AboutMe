@@ -1,5 +1,4 @@
-# Source-of-truth metadata for the static, bilingual GitHub Pages site.
-# Page order determines the primary/home page.
+# 公開ページの設定。最初の [[pages]] がホームページになります。
 
 [site]
 brand = "Engineering / Profile"
@@ -17,16 +16,16 @@ subtitle = "ソフトウェア設計・開発の経験と技術的な取り組�
 date = "2026年11月時点の記録"
 toc = "目次"
 switch = "English"
-switch_url = "./index_english.html"
+switch_url = "./index.en.html"
 skip = "本文へ移動"
 
 [[pages]]
 source = "aboutme.en.md"
-output = "index_english.html"
+output = "index.en.html"
 lang = "en"
 title = "Engineering Profile"
-subtitle = "Software engineering experience and projects"
-date = "Originally documented August 12, 2022"
+subtitle = "Software engineering and development experience"
+date = "As of November 2026"
 toc = "Contents"
 switch = "日本語"
 switch_url = "./index.html"
