@@ -105,6 +105,28 @@ class SiteTests(unittest.TestCase):
                 self.assertTrue(section.count("| 期間 |") == 11 if name == "aboutme.md"
                                 else section.count("| Period |") == 11)
 
+    def test_project_tables_appear_before_explanations(self):
+        """Company projects must list metadata before explanatory prose."""
+        cases = (
+            ("aboutme.md", "## 職歴", "## 語学", "| 項目 | 内容 |"),
+            ("aboutme.en.md", "## WORK EXPERIENCE", "## LANGUAGES",
+             "| Item | Details |"),
+        )
+        for name, start, end, header in cases:
+            with self.subTest(source=name):
+                markdown = (ROOT / "src" / name).read_text(encoding="utf-8")
+                experience = markdown.split(start, 1)[1].split(end, 1)[0]
+                sections = experience.split("\n#### ")[1:]
+                self.assertEqual(len(sections), 13)
+                for section in sections:
+                    with self.subTest(project=section.splitlines()[0]):
+                        content = section.split("\n\n", 1)[1]
+                        self.assertTrue(content.startswith(header + "\n"))
+                        table, prose = content.split("\n\n", 1)
+                        self.assertGreaterEqual(table.count("\n| "), 3)
+                        self.assertTrue(prose.strip())
+                        self.assertFalse(prose.lstrip().startswith("|"))
+
     def test_normalized_markdown(self):
         self.assertFalse((ROOT / "src/aboutme_english.md").exists())
         for name in ("aboutme.md", "aboutme.en.md"):
