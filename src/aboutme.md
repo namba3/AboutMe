@@ -1,4 +1,4 @@
-# ABOUT ME <div class="header"><div class="last-updated">最終更新：2026 年 11 月</div><div class="lang-selector">日本語 | [English](./index_english.html)</div><div>
+# ABOUT ME
 
 ## 概要
 
@@ -445,4 +445,3 @@ Webサービスの開発・保守を行っている。
 常に最新の技術について調べ、興味のあるものには実際に触れています。
 最近では WebAssembly とそのシステム向けランタイムの仕様である WASI の成熟について動向を追っています。
 英語記事を読むことに抵抗はないため、日本語での情報が薄いような事柄についても積極的に情報を得ています。
-@import "style.less"
