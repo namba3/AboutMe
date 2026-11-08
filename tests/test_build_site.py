@@ -85,6 +85,52 @@ class SiteTests(unittest.TestCase):
                 self.assertIn("## " + sections[-2] + "\n", markdown)
                 self.assertIn("## " + sections[-1] + "\n", markdown)
 
+    def test_skill_highlights_are_four_tables(self):
+        """Bilingual skill sections are concise and free of per-language headings."""
+        cases = (
+            ("aboutme.md", "## スキルハイライト", "## 職歴",
+             ("プログラミング言語", "設計・アーキテクチャ",
+              "クラウドインフラ", "ツール・開発環境"),
+             ("C#", "Rust", "Python", "Go", "C", "C++",
+              "TypeScript / JavaScript"),
+             ("API設計", "疎結合・変更容易性", "性能最適化")),
+            ("aboutme.en.md", "## SKILLS HIGHLIGHTS", "## WORK EXPERIENCE",
+             ("Programming Languages", "Software Design and Architecture",
+              "Cloud Infrastructure", "Tools and Development Environment"),
+             ("C#", "Rust", "Python", "Go", "C", "C++",
+              "TypeScript / JavaScript"),
+             ("API Design", "Loose Coupling and Replaceability",
+              "Performance Optimization")),
+        )
+        for name, start, end, headings, languages, topics in cases:
+            with self.subTest(file=name):
+                markdown = (ROOT / "src" / name).read_text(encoding="utf-8")
+                skills = markdown.split(start + "\n", 1)[1].split(end + "\n", 1)[0]
+                self.assertEqual(
+                    [line[4:] for line in skills.splitlines()
+                     if line.startswith("### ")], list(headings))
+                self.assertNotIn("\n#### ", skills)
+                sections = skills.split("\n### ")[1:]
+                self.assertEqual(len(sections), 4)
+                for section in sections:
+                    rows = [line for line in section.splitlines()
+                            if line.startswith("| ")]
+                    self.assertGreaterEqual(len(rows), 6)
+                    self.assertEqual(rows[1], "| --- | --- |")
+                language_rows = [line.split("|")[1].strip()
+                                 for line in sections[0].splitlines()
+                                 if line.startswith("| ")][2:]
+                self.assertEqual(language_rows, list(languages))
+                for topic in topics:
+                    self.assertIn("| " + topic + " |", skills)
+                self.assertIn("Lambda", skills)
+                self.assertIn("Docker", skills)
+
+                # Verify table rendering, not only Markdown source layout.
+                html, _ = convert(ROOT / "src" / name)
+                self.assertIn("<table>", html)
+                self.assertIn("API", html)
+
     def test_company_metadata_is_bullet_list(self):
         """Keep employment metadata compact in both languages."""
         cases = (
