@@ -10,14 +10,13 @@ import mistune
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = [
     dict(source="aboutme.md", output="index.html", lang="ja", title="技術プロフィール",
-         subtitle="ソフトウェア設計・開発の経験と技術的な取り組み", date="2022年8月12日時点の記録",
+         subtitle="ソフトウェア設計・開発の経験と技術的な取り組み", date="2026年11月時点の記録",
          toc="目次", switch="English", switch_url="./index_english.html", skip="本文へ移動"),
     dict(source="aboutme_english.md", output="index_english.html", lang="en",
          title="Engineering Profile", subtitle="Software engineering experience and projects",
          date="Originally documented August 12, 2022", toc="Contents",
          switch="日本語", switch_url="./index.html", skip="Skip to content"),
 ]
-
 
 class OutlineRenderer(mistune.HTMLRenderer):
     def __init__(self):
@@ -32,7 +31,6 @@ class OutlineRenderer(mistune.HTMLRenderer):
             return f'<h2 id="{anchor}">{text}</h2>\n'
         return f"<h{level}>{text}</h{level}>\n"
 
-
 def convert(source):
     lines = source.read_text(encoding="utf-8").splitlines()
     if not lines or lines[0].strip() != "# ABOUT ME":
@@ -44,7 +42,6 @@ def convert(source):
     if not renderer.sections:
         raise ValueError(f"No section headings in {source}")
     return text, renderer.sections
-
 
 def render(page, content, sections):
     links = "\n".join(
@@ -100,7 +97,6 @@ def render(page, content, sections):
 </html>
 """
 
-
 def build(destination):
     output = destination.resolve()
     if output == ROOT:
@@ -113,7 +109,6 @@ def build(destination):
         content, sections = convert(ROOT / "src" / page["source"])
         (output / page["output"]).write_text(render(page, content, sections), encoding="utf-8")
     (output / ".nojekyll").touch()
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
