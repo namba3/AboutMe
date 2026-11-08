@@ -45,7 +45,7 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(
             [title for _, title in en_sections],
             ["SUMMARY", "EDUCATION AND EMPLOYMENT", "SKILLS HIGHLIGHTS",
-             "WORK EXPERIENCE", "LANGUAGES", "OTHER", "PERSONAL STATEMENT"],
+             "WORK EXPERIENCE", "LANGUAGES", "PERSONAL STATEMENT", "OTHER"],
         )
         ja_content = (ROOT / "src/aboutme.md").read_text(encoding="utf-8")
         en_content = (ROOT / "src/aboutme.en.md").read_text(encoding="utf-8")
@@ -54,6 +54,36 @@ class SiteTests(unittest.TestCase):
                       "Core Concept Technologies", "Kakaku.com"):
             self.assertIn(topic, en_content)
 
+
+    def test_summary_and_final_sections(self):
+        """The two languages use a three-paragraph summary and matching order."""
+        cases = (
+            ("aboutme.md",
+             ["概要", "学歴・職歴", "スキルハイライト", "職歴",
+              "語学", "自己 PR", "その他"],
+             ("産業IoT", "3Dモデルビューワー", "Rust", "API境界",
+              "企画・デザイン", "個人開発")),
+            ("aboutme.en.md",
+             ["SUMMARY", "EDUCATION AND EMPLOYMENT", "SKILLS HIGHLIGHTS",
+              "WORK EXPERIENCE", "LANGUAGES", "PERSONAL STATEMENT", "OTHER"],
+             ("industrial IoT", "3D model viewers", "Rust", "API boundary",
+              "product planners", "personal projects")),
+        )
+        for filename, expected_titles, terms in cases:
+            with self.subTest(source=filename):
+                markdown = (ROOT / "src" / filename).read_text(encoding="utf-8")
+                sections = [line[3:] for line in markdown.splitlines()
+                            if line.startswith("## ")]
+                self.assertEqual(sections, expected_titles)
+                intro = markdown.split("## " + sections[0] + "\n", 1)[1].split(
+                    "## " + sections[1] + "\n", 1)[0].strip()
+                self.assertEqual(len(intro.split("\n\n")), 3)
+                for term in terms:
+                    self.assertIn(term, intro)
+                self.assertNotIn("IoT 関連の 3 年間", intro)
+                self.assertNotIn("More than four years", intro)
+                self.assertIn("## " + sections[-2] + "\n", markdown)
+                self.assertIn("## " + sections[-1] + "\n", markdown)
 
     def test_company_metadata_is_bullet_list(self):
         """Keep employment metadata compact in both languages."""
