@@ -109,6 +109,7 @@ I also learned version control with Git.
 | --- | --- |
 | Development Environment | Windows |
 | Languages / Frameworks | C# / .NET Framework<br>C++<br>Python |
+
 ### Fixstars Corporation (Internship)
 
 - Period: August 2017 – September 2017
@@ -124,6 +125,7 @@ Since that internship, I have emphasized catching errors at compile time through
 | --- | --- |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | C<br>C++ |
+
 ### Core Concept Technologies Inc.
 
 - Period: April 2018 – November 2021
@@ -141,6 +143,7 @@ While fixing defects, I also refactored redundant or difficult-to-read code to i
 | Development Team Members | 2–3 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | C# / .NET Framework, ASP.NET<br>C++<br>JavaScript / Vue.js |
+
 #### Project: Authentication and Authorization Server
 
 I built an authentication and authorization server to authorize access to a customer's internal applications through Microsoft Azure AD.
@@ -153,6 +156,7 @@ I selected Go for its mature authentication and authorization libraries, high ru
 | Development Team Members | 1 person |
 | Development Environment | Windows |
 | Languages / Frameworks | Go |
+
 #### Project: IoT Device Monitoring and Visualization System
 
 I developed an application that collects, manages, and visualizes data from IoT devices manufactured and sold by a customer.
@@ -168,6 +172,7 @@ Later, I improved documentation, clarified specifications with the customer, and
 | Development Team Members | 1–2 people |
 | Development Environment | Windows |
 | Languages / Frameworks | C# / .NET Framework, ASP.NET<br>JavaScript / Vue.js |
+
 #### Project: Remote Management System for Machine Tools
 
 For a machine-tool manufacturer, I developed and operated a system for monitoring the operating status and diagnostic information of machines, both within factories and after shipment to end users.
@@ -182,6 +187,7 @@ This project introduced me to serverless computing, which made a strong impressi
 | Development Team Members | 3–4 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | JavaScript / Vue.js, Node.js<br>C# / .NET Framework, ASP.NET |
+
 #### Project: Sample Implementation of an Industrial Communication Protocol
 
 I developed a sample implementation of MTConnect, an industrial communication protocol, to help a customer in the machine-tool industry gain familiarity with the technology.
@@ -191,6 +197,7 @@ I developed a sample implementation of MTConnect, an industrial communication pr
 | Period | May – July 2019 |
 | Development Team Members | 1 person |
 | Languages / Frameworks | C# / .NET Framework |
+
 #### Project: EMO International Trade Fair
 
 I developed a demonstration application for a customer's exhibition at EMO, an international machine-tool trade fair.
@@ -213,6 +220,7 @@ Communicating by email with the event organizer and partner companies also gave 
 | Development Team Members | 1 person |
 | Development Environment | Windows |
 | Languages / Frameworks | C# / .NET Framework<br>Go<br>TypeScript / Vue.js |
+
 #### Project: Data Acquisition Proof of Concept for Predictive Maintenance
 
 This project explored detecting tool breakage and early warning signs of failure in machine tools operating at a customer's factory.
@@ -239,6 +247,7 @@ When a new type of device was introduced during the project, the cost of integra
 | Development Team Members | 5–6 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | Go / grpc-go<br>C# / .NET Core, ASP.NET Core<br>Rust / tonic, Tokio |
+
 #### Project: Architectural 3D Model Viewer
 
 I worked on customizing a browser-based 3D model viewer for a customer.
@@ -256,6 +265,7 @@ I was responsible for the general-purpose GUI components.
 | Development Team Members | 3–4 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | TypeScript, JavaScript / Angular |
+
 #### Project: Prototype Viewer for Very Large 3D Models
 
 I worked on a prototype viewer for very large 3D models, approximately 10–100 GB, which could not be displayed directly in a web browser using the existing product.
@@ -277,6 +287,7 @@ I was responsible for the API server and the web interface.
 | Development Team Members | 2–3 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | Rust / Actix, actix-web, Tokio<br>JavaScript / Node.js |
+
 #### Project: Architectural Design Workflow System
 
 I participated in developing a system for architectural design workflows.
@@ -288,6 +299,7 @@ The system consisted of multiple applications, and I worked on frontend and back
 | Development Team Members | More than 30 people |
 | Development Environment | Windows, Linux |
 | Languages / Frameworks | C# / .NET Framework<br>TypeScript, JavaScript / Angular |
+
 ### Kakaku.com, Inc.
 
 - Period: November 2022 – Present
