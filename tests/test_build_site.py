@@ -238,6 +238,39 @@ class SiteTests(unittest.TestCase):
             self.assertEqual(section.count("| 項目 | 内容 |") +
                              section.count("| Item | Details |"), 1)
 
+    def test_personal_statement_ai_assisted_learning(self):
+        """The bilingual personal statements explain design goals and AI use."""
+        cases = (
+            ("aboutme.md", "## 自己 PR", "## その他",
+             ("心掛け", "自己研鑽"),
+             ("性能", "安全性", "保守性", "変更容易性", "トレードオフ"),
+             ("生成AI", "プロトタイピング", "設計案", "仮説", "レビュー", "テスト")),
+            ("aboutme.en.md", "## PERSONAL STATEMENT", "## OTHER",
+             ("Engineering Principles", "Continuous Learning"),
+             ("performance", "safety", "maintainability", "trade-offs"),
+             ("Generative AI", "prototyping", "designs", "hypotheses",
+              "review", "testing")),
+        )
+        for filename, start, end, titles, principles, learning in cases:
+            with self.subTest(file=filename):
+                source = (ROOT / "src" / filename).read_text(encoding="utf-8")
+                section = source.split(start + "\n", 1)[1].split(
+                    end + "\n", 1)[0]
+                subheadings = [line[4:] for line in section.splitlines()
+                               if line.startswith("### ")]
+                self.assertEqual(subheadings, list(titles))
+                first = section.split("### " + titles[0] + "\n", 1)[1].split(
+                    "### " + titles[1] + "\n", 1)[0].strip()
+                second = section.split("### " + titles[1] + "\n", 1)[1].strip()
+                self.assertEqual(len(first.split("\n\n")), 2)
+                self.assertEqual(len(second.split("\n\n")), 3)
+                for word in principles:
+                    self.assertIn(word, first)
+                for word in learning:
+                    self.assertIn(word, second)
+                self.assertNotIn("WebAssembly", second)
+                self.assertNotIn("WASI", second)
+
     def test_normalized_markdown(self):
         self.assertFalse((ROOT / "src/aboutme_english.md").exists())
         for name in ("aboutme.md", "aboutme.en.md"):
