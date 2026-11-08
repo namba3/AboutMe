@@ -105,16 +105,10 @@ I used it across several projects, including the following services:
 I tested development versions of OCR software, evaluated recognition accuracy, prepared training data, and researched OCR-related technologies.
 I also learned version control with Git.
 
-##### Development Environment
-
-- OS: Windows
-
-##### Languages / Frameworks
-
-- C# / .NET Framework
-- C++
-- Python
-
+| Item | Details |
+| --- | --- |
+| Development Environment | Windows |
+| Languages / Frameworks | C# / .NET Framework<br>C++<br>Python |
 ### Fixstars Corporation (Internship)
 
 - Period: August 2017 – September 2017
@@ -126,15 +120,10 @@ I ported image processing algorithms to PowerPC VMX and improved their performan
 Although I was already familiar with SIMD optimization, I learned the importance of unit tests for verifying program correctness.
 Since that internship, I have emphasized catching errors at compile time through type systems and writing tests, practices that continue to help me build reliable software.
 
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- C
-- C++
-
+| Item | Details |
+| --- | --- |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | C<br>C++ |
 ### Core Concept Technologies Inc.
 
 - Period: April 2018 – November 2021
@@ -142,49 +131,29 @@ Since that internship, I have emphasized catching errors at compile time through
 
 #### Project: Data Collection Application for Machine Tools
 
-Period: July 2018 – November 2021
-
 I developed software that provides a unified interface to machine tools whose protocols and available data vary by manufacturer.
 My work included fixing defects, improving performance, and implementing new features.
 While fixing defects, I also refactored redundant or difficult-to-read code to improve maintainability without sacrificing performance.
 
-##### Team Size
-
-2–3 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- C# / .NET Framework, ASP.NET
-- C++
-- JavaScript / Vue.js
-
+| Item | Details |
+| --- | --- |
+| Period | July 2018 – November 2021 |
+| Development Team Members | 2–3 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | C# / .NET Framework, ASP.NET<br>C++<br>JavaScript / Vue.js |
 #### Project: Authentication and Authorization Server
-
-Period: November – December 2018
 
 I built an authentication and authorization server to authorize access to a customer's internal applications through Microsoft Azure AD.
 Because the existing applications could not be modified, I chose a reverse-proxy architecture.
 I selected Go for its mature authentication and authorization libraries, high runtime performance, and ease of learning.
 
-##### Team Size
-
-1 person
-
-##### Development Environment
-
-- OS: Windows
-
-##### Languages / Frameworks
-
-- Go
-
+| Item | Details |
+| --- | --- |
+| Period | November – December 2018 |
+| Development Team Members | 1 person |
+| Development Environment | Windows |
+| Languages / Frameworks | Go |
 #### Project: IoT Device Monitoring and Visualization System
-
-Period: December 2018 – April 2021
 
 I developed an application that collects, manages, and visualizes data from IoT devices manufactured and sold by a customer.
 The first version was created as a demonstration for an IoT trade show.
@@ -193,22 +162,13 @@ The customer subsequently commissioned further development, and the application 
 To meet the trade show deadline, we prioritized implementation and neglected some requirements analysis and design, accumulating technical debt.
 Later, I improved documentation, clarified specifications with the customer, and addressed the debt that needed to be repaid.
 
-##### Team Size
-
-1–2 people
-
-##### Development Environment
-
-- OS: Windows
-
-##### Languages / Frameworks
-
-- C# / .NET Framework, ASP.NET
-- JavaScript / Vue.js
-
+| Item | Details |
+| --- | --- |
+| Period | December 2018 – April 2021 |
+| Development Team Members | 1–2 people |
+| Development Environment | Windows |
+| Languages / Frameworks | C# / .NET Framework, ASP.NET<br>JavaScript / Vue.js |
 #### Project: Remote Management System for Machine Tools
-
-Period: March 2019 – November 2021
 
 For a machine-tool manufacturer, I developed and operated a system for monitoring the operating status and diagnostic information of machines, both within factories and after shipment to end users.
 It supported troubleshooting and remote firmware updates.
@@ -216,36 +176,22 @@ It supported troubleshooting and remote firmware updates.
 The system ran on AWS. It stored and transformed data received from the data collection application described above, provided an API server for retrieving data for web interfaces, and hosted those interfaces.
 This project introduced me to serverless computing, which made a strong impression on me.
 
-##### Team Size
-
-3–4 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- JavaScript / Vue.js, Node.js
-- C# / .NET Framework, ASP.NET
-
+| Item | Details |
+| --- | --- |
+| Period | March 2019 – November 2021 |
+| Development Team Members | 3–4 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | JavaScript / Vue.js, Node.js<br>C# / .NET Framework, ASP.NET |
 #### Project: Sample Implementation of an Industrial Communication Protocol
-
-Period: May – July 2019
 
 I developed a sample implementation of MTConnect, an industrial communication protocol, to help a customer in the machine-tool industry gain familiarity with the technology.
 
-##### Team Size
-
-1 person
-
-##### Languages / Frameworks
-
-- C# / .NET Framework
-
+| Item | Details |
+| --- | --- |
+| Period | May – July 2019 |
+| Development Team Members | 1 person |
+| Languages / Frameworks | C# / .NET Framework |
 #### Project: EMO International Trade Fair
-
-Period: July – September 2019
 
 I developed a demonstration application for a customer's exhibition at EMO, an international machine-tool trade fair.
 The demonstration used umati, an interface for accessing data from network-connected machine tools.
@@ -261,23 +207,13 @@ By working directly with the customer's engineers and exchanging knowledge, I wa
 
 Communicating by email with the event organizer and partner companies also gave me my first opportunity to use English in a professional setting.
 
-##### Team Size
-
-1 person
-
-##### Development Environment
-
-- OS: Windows
-
-##### Languages / Frameworks
-
-- C# / .NET Framework
-- Go
-- TypeScript / Vue.js
-
+| Item | Details |
+| --- | --- |
+| Period | July – September 2019 |
+| Development Team Members | 1 person |
+| Development Environment | Windows |
+| Languages / Frameworks | C# / .NET Framework<br>Go<br>TypeScript / Vue.js |
 #### Project: Data Acquisition Proof of Concept for Predictive Maintenance
-
-Period: November 2019 – April 2020
 
 This project explored detecting tool breakage and early warning signs of failure in machine tools operating at a customer's factory.
 The system consisted of:
@@ -297,23 +233,13 @@ By defining only the communication interface and data types with gRPC and Protoc
 
 When a new type of device was introduced during the project, the cost of integration remained low—even when the manufacturer's library could only be used from a particular programming language.
 
-##### Team Size
-
-5–6 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- Go / grpc-go
-- C# / .NET Core, ASP.NET Core
-- Rust / tonic, Tokio
-
+| Item | Details |
+| --- | --- |
+| Period | November 2019 – April 2020 |
+| Development Team Members | 5–6 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | Go / grpc-go<br>C# / .NET Core, ASP.NET Core<br>Rust / tonic, Tokio |
 #### Project: Architectural 3D Model Viewer
-
-Period: January – May 2020
 
 I worked on customizing a browser-based 3D model viewer for a customer.
 The viewer consisted of:
@@ -324,21 +250,13 @@ The viewer consisted of:
 
 I was responsible for the general-purpose GUI components.
 
-##### Team Size
-
-3–4 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- TypeScript, JavaScript / Angular
-
+| Item | Details |
+| --- | --- |
+| Period | January – May 2020 |
+| Development Team Members | 3–4 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | TypeScript, JavaScript / Angular |
 #### Project: Prototype Viewer for Very Large 3D Models
-
-Period: May 2020 – November 2021
 
 I worked on a prototype viewer for very large 3D models, approximately 10–100 GB, which could not be displayed directly in a web browser using the existing product.
 
@@ -353,39 +271,23 @@ The system consisted of:
 
 I was responsible for the API server and the web interface.
 
-##### Team Size
-
-2–3 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- Rust / Actix, actix-web, Tokio
-- JavaScript / Node.js
-
+| Item | Details |
+| --- | --- |
+| Period | May 2020 – November 2021 |
+| Development Team Members | 2–3 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | Rust / Actix, actix-web, Tokio<br>JavaScript / Node.js |
 #### Project: Architectural Design Workflow System
-
-Period: April – October 2021
 
 I participated in developing a system for architectural design workflows.
 The system consisted of multiple applications, and I worked on frontend and backend development for one of them.
 
-##### Team Size
-
-More than 30 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- C# / .NET Framework
-- TypeScript, JavaScript / Angular
-
+| Item | Details |
+| --- | --- |
+| Period | April – October 2021 |
+| Development Team Members | More than 30 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | C# / .NET Framework<br>TypeScript, JavaScript / Angular |
 ### Kakaku.com, Inc.
 
 - Period: November 2022 – Present
@@ -393,23 +295,15 @@ More than 30 people
 
 #### Main Responsibilities
 
-Period: November 2022 – Present
-
 I develop and maintain web services, working across a broad range of components, including related administration interfaces and batch-processing applications.
 
-##### Team Size
+| Item | Details |
+| --- | --- |
+| Period | November 2022 – Present |
+| Development Team Members | 4–5 people |
+| Development Environment | Windows, Linux |
+| Languages / Frameworks | C# / .NET Framework, ASP.NET<br>JavaScript<br>Python |
 
-4–5 people
-
-##### Development Environment
-
-- OS: Windows, Linux
-
-##### Languages / Frameworks
-
-- C# / .NET Framework, ASP.NET
-- JavaScript
-- Python
 
 ---
 
