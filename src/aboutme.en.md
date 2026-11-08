@@ -323,15 +323,18 @@ For the internal architecture, I applied lessons from introducing DI and separat
 
 ### Engineering Principles
 
-I aim to design safe and efficient algorithms, with an emphasis on software quality.
-Whenever possible, I write documentation comments to make code easier to understand and help new team members become productive.
-When deadlines take priority over safety or runtime performance, or when code may contain defects, I document those limitations so the code can be refactored more easily later.
+I emphasize performance, safety, maintainability, and ease of change when designing and implementing software. Rather than focusing only on delivering features, I aim to build systems that remain maintainable and adaptable over time through clear separation of responsibilities, well-managed dependencies, and appropriate abstractions.
+
+I also value making the reasoning behind a design understandable to other developers, including intended behavior, technical constraints, and trade-offs. When deadlines or compatibility with existing systems prevent an ideal design, I try to make those compromises explicit and leave room for future improvements.
 
 ### Continuous Learning
 
-I regularly explore new technologies and experiment with those that interest me.
-I have followed developments in WebAssembly and WASI, the system interface for WebAssembly runtimes.
-I am comfortable reading technical articles in English and actively seek information on topics that are not well covered in Japanese.
+I prefer to deepen my understanding of new technologies and design approaches through hands-on experimentation, alongside reading documentation and technical articles. My personal projects, primarily in Rust, provide opportunities to explore systems programming and software architecture.
+
+Generative AI has reduced the cost of implementation and prototyping, making it practical to try ideas that I previously could not pursue due to time constraints. I use AI not merely to generate code, but also to implement and compare different designs and test technical hypotheses more quickly.
+
+At the same time, I believe that deciding what to design, what to validate, and how to assess trade-offs remains essential. Rather than accepting AI-generated code or designs uncritically, I evaluate them through review, testing, and performance measurements when appropriate, aiming to combine faster experimentation with sound engineering judgment.
+
 ## OTHER
 
 - [GitHub](https://github.com/namba3)
