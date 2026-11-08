@@ -1,4 +1,4 @@
-# ABOUT ME <div class="header"><div class="last-updated">Last Updated: August 12, 2022</div><div class="lang-selector">[日本語](./index.html) | English</div><div>
+# ABOUT ME <div class="header"><div class="last-updated">Last Updated: August, 2022</div><div class="lang-selector">[日本語](./index.html) | English</div><div>
 
 ## SUMMARY
 
