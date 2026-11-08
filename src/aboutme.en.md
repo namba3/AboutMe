@@ -97,9 +97,8 @@ I used it across several projects, including the following services:
 
 ### Hammock Corporation (Part-Time)
 
-#### Period
-
-October 2015 – March 2018
+- Period: October 2015 – March 2018
+- Role: Technical Staff (Part-Time)
 
 #### Responsibilities
 
@@ -118,9 +117,8 @@ I also learned version control with Git.
 
 ### Fixstars Corporation (Internship)
 
-#### Period
-
-August 2017 – September 2017
+- Period: August 2017 – September 2017
+- Role: Software Developer (Internship)
 
 #### Project: Image Processing Algorithm Optimization
 
@@ -139,13 +137,8 @@ Since that internship, I have emphasized catching errors at compile time through
 
 ### Core Concept Technologies Inc.
 
-#### Period
-
-April 2018 – November 2021
-
-#### Role
-
-Software Engineer
+- Period: April 2018 – November 2021
+- Role: Software Engineer
 
 #### Project: Data Collection Application for Machine Tools
 
@@ -395,13 +388,8 @@ More than 30 people
 
 ### Kakaku.com, Inc.
 
-#### Period
-
-November 2022 – Present
-
-#### Role
-
-Software Engineer
+- Period: November 2022 – Present
+- Role: Software Engineer
 
 #### Main Responsibilities
 

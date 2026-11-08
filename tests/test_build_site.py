@@ -54,6 +54,33 @@ class SiteTests(unittest.TestCase):
                       "Core Concept Technologies", "Kakaku.com"):
             self.assertIn(topic, en_content)
 
+
+    def test_company_metadata_is_bullet_list(self):
+        """Keep employment metadata compact in both languages."""
+        cases = (
+            ("aboutme.md", "## 職歴", "## 語学", "- 在籍期間：", "- 職種：",
+             ("株式会社ハンモック", "株式会社フィックスターズ",
+              "株式会社コアコンセプト・テクノロジー", "株式会社カカクコム")),
+            ("aboutme.en.md", "## WORK EXPERIENCE", "## LANGUAGES",
+             "- Period: ", "- Role: ",
+             ("Hammock Corporation", "Fixstars Corporation",
+              "Core Concept Technologies Inc.", "Kakaku.com, Inc.")),
+        )
+        for filename, start, end, period_label, role_label, companies in cases:
+            source = (ROOT / "src" / filename).read_text(encoding="utf-8")
+            work = source.split(start, 1)[1].split(end, 1)[0]
+            company_sections = work.split("\n### ")[1:]
+            self.assertEqual(len(company_sections), len(companies))
+            for section, company in zip(company_sections, companies):
+                with self.subTest(filename=filename, company=company):
+                    self.assertTrue(section.startswith(company + "\n"))
+                    self.assertIn("\n" + period_label, section)
+                    self.assertIn("\n" + role_label, section)
+                    self.assertNotIn("#### 在籍期間", section)
+                    self.assertNotIn("#### 職種", section)
+                    self.assertNotIn("#### Period", section)
+                    self.assertNotIn("#### Role", section)
+
     def test_normalized_markdown(self):
         self.assertFalse((ROOT / "src/aboutme_english.md").exists())
         for name in ("aboutme.md", "aboutme.en.md"):
