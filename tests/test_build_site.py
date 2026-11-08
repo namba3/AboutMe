@@ -81,6 +81,30 @@ class SiteTests(unittest.TestCase):
                     self.assertNotIn("#### Period", section)
                     self.assertNotIn("#### Role", section)
 
+    def test_project_metadata_tables(self):
+        """All experience metadata must use compact tables, not nested headings."""
+        cases = (
+            ("aboutme.md", "## 職歴", "## 語学",
+             "| 項目 | 内容 |", "| 開発チームメンバー |",
+             "| 開発環境 |", "| 言語・フレームワーク等 |"),
+            ("aboutme.en.md", "## WORK EXPERIENCE", "## LANGUAGES",
+             "| Item | Details |", "| Development Team Members |",
+             "| Development Environment |", "| Languages / Frameworks |"),
+        )
+        for name, start, end, table, team, environment, languages in cases:
+            with self.subTest(source=name):
+                content = (ROOT / "src" / name).read_text(encoding="utf-8")
+                section = content.split(start, 1)[1].split(end, 1)[0]
+                self.assertEqual(section.count(table), 13)
+                self.assertEqual(section.count(team), 11)
+                self.assertEqual(section.count(environment), 12)
+                self.assertEqual(section.count(languages), 13)
+                self.assertNotIn("##### ", section)
+                self.assertNotIn("#### 在籍期間", section)
+                self.assertNotIn("#### Period", section)
+                self.assertTrue(section.count("| 期間 |") == 11 if name == "aboutme.md"
+                                else section.count("| Period |") == 11)
+
     def test_normalized_markdown(self):
         self.assertFalse((ROOT / "src/aboutme_english.md").exists())
         for name in ("aboutme.md", "aboutme.en.md"):
